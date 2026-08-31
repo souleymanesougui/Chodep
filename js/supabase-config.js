@@ -7,7 +7,7 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 const SUPABASE_URL = "https://cqtdipfkuzodoegsfsnl.supabase.co";
-const SUPABASE_ANON_KEY = "REMPLACER_supabaseAnonKey";
+const SUPABASE_ANON_KEY ="sb_publishable_tvms4_sTveZgJaFe1kAxZg_3MeWfF2J";
 
 export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
   auth: { persistSession: true, autoRefreshToken: true },
