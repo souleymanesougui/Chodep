@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CHODEP N'Djaména — Formations, développement personnel et accompagnement</title>
+<meta name="description" content="CHODEP construit aujourd'hui les compétences et les leaders de demain : formations, leadership, entrepreneuriat, accompagnement et activités communautaires à N'Djaména.">
+<meta property="og:title" content="CHODEP — Construire aujourd'hui les compétences et les leaders de demain">
+<meta property="og:description" content="Formations, développement personnel, leadership, entrepreneuriat et accompagnement communautaire.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="brand"><span class="mark">CH</span> CHODEP</a>
+    <nav class="main-nav">
+      <a href="index.html" class="active" data-i18n="nav.accueil">Accueil</a>
+      <a href="a-propos.html" data-i18n="nav.apropos">À propos</a>
+      <a href="formations.html" data-i18n="nav.formations">Formations</a>
+      <a href="evenements.html" data-i18n="nav.evenements">Événements</a>
+      <a href="actualites.html" data-i18n="nav.actualites">Actualités</a>
+      <a href="galerie.html" data-i18n="nav.galerie">Galerie</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-toggle">
+        <button class="active" data-lang="fr">FR</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <button class="theme-toggle" aria-label="Changer de thème">🌓</button>
+      <a href="contact.html" class="btn btn-outline btn-sm" style="display:none" id="desktopContactBtn">Nous contacter</a>
+      <button class="hamburger" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- Menu mobile plein écran -->
+<div class="mobile-nav">
+  <div class="top-row">
+    <a href="index.html" class="brand" style="color:#F1EFE8"><span class="mark">CH</span> CHODEP</a>
+    <button class="close-btn">✕</button>
+  </div>
+  <a href="index.html" data-i18n="nav.accueil">Accueil</a>
+  <a href="a-propos.html" data-i18n="nav.apropos">À propos</a>
+  <a href="formations.html" data-i18n="nav.formations">Formations</a>
+  <a href="evenements.html" data-i18n="nav.evenements">Événements</a>
+  <a href="actualites.html" data-i18n="nav.actualites">Actualités</a>
+  <a href="galerie.html" data-i18n="nav.galerie">Galerie</a>
+  <a href="partenaires.html" data-i18n="nav.partenaires">Partenaires</a>
+  <a href="contact.html" data-i18n="nav.contact">Contact</a>
+  <a href="contact.html" class="btn btn-primary" data-i18n="nav.contacter">Nous contacter</a>
+</div>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-chevrons" aria-hidden="true">
+    <svg width="100%" height="100%" preserveAspectRatio="none">
+      <defs>
+        <pattern id="chevrons" width="60" height="34" patternUnits="userSpaceOnUse">
+          <path d="M0 34 L15 0 L30 34 L45 0 L60 34" fill="none" stroke="#E3B563" stroke-width="1.4"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#chevrons)"/>
+    </svg>
+  </div>
+  <div class="hero-inner">
+    <div class="eyebrow" data-i18n="hero.eyebrow">CHODEP · N'Djaména</div>
+    <h1 data-i18n="hero.title">Construire aujourd'hui les <em>compétences</em> et les leaders de demain.</h1>
+    <p class="lede" data-i18n="hero.lede">CHODEP accompagne les jeunes et les communautés à travers des formations, un accompagnement personnalisé et des actions de terrain qui font grandir durablement.</p>
+    <div class="hero-cta">
+      <a href="a-propos.html" class="btn btn-primary" data-i18n="hero.cta.discover">Découvrir CHODEP</a>
+      <a href="formations.html" class="btn btn-ghost" data-i18n="hero.cta.trainings">Voir nos formations</a>
+    </div>
+    <div class="hero-stats" id="heroStats">
+      <div><div class="stat-num" data-setting="stat-participants">+500</div><div class="stat-label" data-i18n="stats.participants">Participants</div></div>
+      <div><div class="stat-num" data-setting="stat-formations">+30</div><div class="stat-label" data-i18n="stats.formations">Formations</div></div>
+      <div><div class="stat-num" data-setting="stat-evenements">+20</div><div class="stat-label" data-i18n="stats.evenements">Événements</div></div>
+      <div><div class="stat-num" data-setting="stat-annees">+10</div><div class="stat-label" data-i18n="stats.annees">Années d'expérience</div></div>
+    </div>
+  </div>
+</section>
+<div class="chevron-divider"><svg viewBox="0 0 600 26" preserveAspectRatio="none"><path d="M0 26 L15 0 L30 26 L45 0 L60 26 L75 0 L90 26 L105 0 L120 26 L135 0 L150 26 L165 0 L180 26 L195 0 L210 26 L225 0 L240 26 L255 0 L270 26 L285 0 L300 26 L315 0 L330 26 L345 0 L360 26 L375 0 L390 26 L405 0 L420 26 L435 0 L450 26 L465 0 L480 26 L495 0 L510 26 L525 0 L540 26 L555 0 L570 26 L585 0 L600 26" fill="none" stroke="var(--gold)" stroke-width="2" opacity="0.5"/></svg></div>
+
+<!-- ===================== PRÉSENTATION RAPIDE ===================== -->
+<section class="section">
+  <div class="container">
+    <div class="grid grid-2" style="align-items:center; gap:60px;">
+      <div class="reveal">
+        <div class="eyebrow">Qui sommes-nous</div>
+        <h2>Une organisation au service des jeunes et des communautés</h2>
+        <p class="body-text" style="margin-top:20px;">
+          CHODEP œuvre pour le développement des compétences, l'émergence de leaders responsables et
+          l'autonomisation des communautés à travers la formation, l'accompagnement et des actions concrètes
+          de terrain. Notre approche allie rigueur pédagogique et proximité humaine.
+        </p>
+        <a href="a-propos.html" class="btn btn-outline" style="margin-top:26px;">En savoir plus</a>
+      </div>
+      <div class="reveal" style="aspect-ratio:4/3; border-radius:var(--radius-l); background:linear-gradient(135deg,var(--ink-2),var(--ink)); position:relative; overflow:hidden;">
+        <svg width="100%" height="100%" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="300" fill="none"/>
+          <path d="M0 300 L60 180 L120 300 L180 180 L240 300 L300 180 L360 300 L400 260" fill="none" stroke="#E3B563" stroke-width="2" opacity="0.55"/>
+          <path d="M0 260 L60 140 L120 260 L180 140 L240 260 L300 140 L360 260 L400 220" fill="none" stroke="#E3B563" stroke-width="1.2" opacity="0.3"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DOMAINES D'INTERVENTION ===================== -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Nos domaines</div>
+        <h2>Ce que nous faisons</h2>
+      </div>
+      <p class="lede" style="margin:0;">Six axes complémentaires pour accompagner chaque étape du développement personnel et collectif.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="domain-card reveal"><div class="ic">🎓</div><h3>Formation</h3><p class="body-text">Programmes pratiques pour renforcer des compétences concrètes et directement applicables.</p></div>
+      <div class="domain-card reveal"><div class="ic">🧠</div><h3>Développement personnel</h3><p class="body-text">Ateliers pour mieux se connaître, gagner en confiance et se fixer des objectifs clairs.</p></div>
+      <div class="domain-card reveal"><div class="ic">🎤</div><h3>Leadership &amp; communication</h3><p class="body-text">Former des leaders capables de mobiliser, décider et s'exprimer avec impact.</p></div>
+      <div class="domain-card reveal"><div class="ic">💼</div><h3>Entrepreneuriat</h3><p class="body-text">Accompagnement à la création et à la structuration de projets porteurs.</p></div>
+      <div class="domain-card reveal"><div class="ic">🤝</div><h3>Accompagnement</h3><p class="body-text">Un suivi personnalisé pour transformer les acquis en résultats durables.</p></div>
+      <div class="domain-card reveal"><div class="ic">🌍</div><h3>Activités communautaires</h3><p class="body-text">Des actions de terrain au service direct des communautés locales.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROCHAINES FORMATIONS ===================== -->
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow" data-i18n="section.formations.eyebrow">Agenda</div>
+        <h2 data-i18n="section.formations.title">Prochaines formations</h2>
+      </div>
+      <a href="formations.html" class="btn btn-outline btn-sm" data-i18n="section.formations.all">Voir toutes les formations</a>
+    </div>
+    <div class="grid grid-3" id="homeFormationsGrid">
+      <!-- Injecté dynamiquement par js/formations.js (fallback statique ci-dessous si Supabase non configuré) -->
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ÉVÉNEMENTS ===================== -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow" data-i18n="section.evenements.eyebrow">À venir</div>
+        <h2 data-i18n="section.evenements.title">Événements</h2>
+      </div>
+      <a href="evenements.html" class="btn btn-outline btn-sm" data-i18n="section.evenements.all">Voir tous les événements</a>
+    </div>
+    <div class="grid grid-3" id="homeEventsGrid"></div>
+  </div>
+</section>
+
+<!-- ===================== STATISTIQUES ===================== -->
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><div class="eyebrow">Impact</div><h2>CHODEP en chiffres</h2></div>
+    </div>
+    <div class="grid grid-4" id="statsGrid">
+      <div class="reveal" style="text-align:center; padding:30px; background:var(--white); border:1px solid var(--line-soft); border-radius:var(--radius-m);"><div class="stat-num" style="font-family:var(--font-display); font-size:2.4rem; color:var(--gold);" data-stat="participants" data-setting="stat-participants">+500</div><div class="stat-label" style="margin-top:6px; color:var(--text-faint);">Participants</div></div>
+      <div class="reveal" style="text-align:center; padding:30px; background:var(--white); border:1px solid var(--line-soft); border-radius:var(--radius-m);"><div class="stat-num" style="font-family:var(--font-display); font-size:2.4rem; color:var(--gold);" data-stat="formations" data-setting="stat-formations">+30</div><div class="stat-label" style="margin-top:6px; color:var(--text-faint);">Formations</div></div>
+      <div class="reveal" style="text-align:center; padding:30px; background:var(--white); border:1px solid var(--line-soft); border-radius:var(--radius-m);"><div class="stat-num" style="font-family:var(--font-display); font-size:2.4rem; color:var(--gold);" data-stat="evenements" data-setting="stat-evenements">+20</div><div class="stat-label" style="margin-top:6px; color:var(--text-faint);">Événements</div></div>
+      <div class="reveal" style="text-align:center; padding:30px; background:var(--white); border:1px solid var(--line-soft); border-radius:var(--radius-m);"><div class="stat-num" style="font-family:var(--font-display); font-size:2.4rem; color:var(--gold);" data-stat="annees" data-setting="stat-annees">+10</div><div class="stat-label" style="margin-top:6px; color:var(--text-faint);">Années d'expérience</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TÉMOIGNAGES ===================== -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head reveal"><div><div class="eyebrow">Témoignages</div><h2>Ce qu'ils en disent</h2></div></div>
+    <div class="grid grid-3">
+      <div class="testimonial reveal">
+        <p>« CHODEP m'a donné les outils et la confiance pour lancer mon propre projet. »</p>
+        <div class="who"><div class="avatar">A.</div><div><strong>Amina H.</strong><div style="font-size:0.82rem; color:var(--text-faint);">Participante, formation Entrepreneuriat</div></div></div>
+      </div>
+      <div class="testimonial reveal">
+        <p>« Un accompagnement humain, exigeant et vraiment utile pour progresser. »</p>
+        <div class="who"><div class="avatar">M.</div><div><strong>Moussa T.</strong><div style="font-size:0.82rem; color:var(--text-faint);">Participant, formation Leadership</div></div></div>
+      </div>
+      <div class="testimonial reveal">
+        <p>« Grâce à CHODEP, j'ai appris à structurer mes idées et à les défendre en public. »</p>
+        <div class="who"><div class="avatar">F.</div><div><strong>Fatimé N.</strong><div style="font-size:0.82rem; color:var(--text-faint);">Participante, formation Communication</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="section">
+  <div class="container">
+    <div class="cta-band reveal">
+      <h2 data-i18n="cta.title">Vous souhaitez participer à nos activités ?</h2>
+      <p data-i18n="cta.lede">Rejoignez une prochaine formation et faites le premier pas vers vos objectifs.</p>
+      <a href="formations.html" class="btn btn-primary" style="margin-top:26px;">S'inscrire à une formation</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="brand" style="color:#F1EFE8"><span class="mark">CH</span> CHODEP</a>
+        <p>Construire aujourd'hui les compétences et les leaders de demain, à travers la formation, l'accompagnement et l'action communautaire.</p>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="WhatsApp">w</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="TikTok">tt</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="YouTube">yt</a>
+        </div>
+      </div>
+      <div><h4 data-i18n="footer.links">Liens rapides</h4>
+        <a href="a-propos.html" data-i18n="nav.apropos">À propos</a>
+        <a href="formations.html" data-i18n="nav.formations">Formations</a>
+        <a href="evenements.html" data-i18n="nav.evenements">Événements</a>
+        <a href="actualites.html" data-i18n="nav.actualites">Actualités</a>
+      </div>
+      <div><h4 data-i18n="footer.resources">Ressources</h4>
+        <a href="galerie.html" data-i18n="nav.galerie">Galerie</a>
+        <a href="partenaires.html" data-i18n="nav.partenaires">Partenaires</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        <a href="admin/login.html" data-i18n="nav.admin">Espace administrateur</a>
+      </div>
+      <div><h4 data-i18n="footer.contact">Contact</h4>
+        <a href="tel:+235" data-setting="telephone">+235 XX XX XX XX</a>
+        <a href="mailto:contact@chodep.org" data-setting="email">contact@chodep.org</a>
+        <a href="#" data-setting="adresse">N&#39;Djaména, Tchad</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 CHODEP. <span data-i18n="footer.rights">Tous droits réservés.</span></span>
+      <span>Conçu avec engagement pour la jeunesse tchadienne.</span>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="js/i18n.js"></script>
+<script type="module" src="js/main.js"></script>
+<script type="module" src="js/settings.js"></script>
+<script type="module" src="js/stats.js"></script>
+<script type="module" src="js/formations.js"></script>
+<script type="module" src="js/evenements.js"></script>
+</body>
+</html>

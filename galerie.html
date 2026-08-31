@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galerie — CHODEP</title>
+<meta name="description" content="Photos et vidéos de nos formations, conférences, ateliers, événements et équipe.">
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="brand"><span class="mark">CH</span> CHODEP</a>
+    <nav class="main-nav">
+      <a href="index.html" data-i18n="nav.accueil">Accueil</a><a href="a-propos.html" data-i18n="nav.apropos">À propos</a><a href="formations.html" data-i18n="nav.formations">Formations</a>
+      <a href="evenements.html" data-i18n="nav.evenements">Événements</a><a href="actualites.html" data-i18n="nav.actualites">Actualités</a>
+      <a href="galerie.html" class="active" data-i18n="nav.galerie">Galerie</a><a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Changer de thème">🌓</button>
+      <button class="hamburger" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav">
+  <div class="top-row"><a href="index.html" class="brand" style="color:#F1EFE8"><span class="mark">CH</span> CHODEP</a><button class="close-btn">✕</button></div>
+  <a href="index.html" data-i18n="nav.accueil">Accueil</a><a href="a-propos.html" data-i18n="nav.apropos">À propos</a><a href="formations.html" data-i18n="nav.formations">Formations</a>
+  <a href="evenements.html" data-i18n="nav.evenements">Événements</a><a href="actualites.html" data-i18n="nav.actualites">Actualités</a><a href="galerie.html" data-i18n="nav.galerie">Galerie</a>
+  <a href="partenaires.html" data-i18n="nav.partenaires">Partenaires</a><a href="contact.html" data-i18n="nav.contact">Contact</a>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html" data-i18n="nav.accueil">Accueil</a> / Galerie</div>
+    <div class="eyebrow">En images</div>
+    <h1>Galerie</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="filter-bar reveal in" id="galleryFilters">
+      <button data-cat="tous" class="active">Tout</button>
+      <button data-cat="formations">Formations</button>
+      <button data-cat="conferences">Conférences</button>
+      <button data-cat="ateliers">Ateliers</button>
+      <button data-cat="evenements">Événements</button>
+      <button data-cat="equipe">Équipe</button>
+    </div>
+    <div class="gallery-grid reveal in" id="galleryGrid"></div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <button class="close" id="lightboxClose">✕</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-bottom" style="border-top:1px solid rgba(241,239,232,0.12); padding-top:22px;">
+      <span>© 2026 CHODEP. <span data-i18n="footer.rights">Tous droits réservés.</span></span>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="js/i18n.js"></script>
+<script type="module" src="js/main.js"></script>
+<script type="module" src="js/settings.js"></script>
+<script type="module" src="js/stats.js"></script>
+<script type="module" src="js/galerie.js"></script>
+</body>
+</html>

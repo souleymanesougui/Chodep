@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nos partenaires — CHODEP</title>
+<meta name="description" content="Découvrez les organisations qui accompagnent CHODEP dans ses actions.">
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="brand"><span class="mark">CH</span> CHODEP</a>
+    <nav class="main-nav">
+      <a href="index.html" data-i18n="nav.accueil">Accueil</a><a href="a-propos.html" data-i18n="nav.apropos">À propos</a><a href="formations.html" data-i18n="nav.formations">Formations</a>
+      <a href="evenements.html" data-i18n="nav.evenements">Événements</a><a href="actualites.html" data-i18n="nav.actualites">Actualités</a>
+      <a href="galerie.html" data-i18n="nav.galerie">Galerie</a><a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Changer de thème">🌓</button>
+      <button class="hamburger" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav">
+  <div class="top-row"><a href="index.html" class="brand" style="color:#F1EFE8"><span class="mark">CH</span> CHODEP</a><button class="close-btn">✕</button></div>
+  <a href="index.html" data-i18n="nav.accueil">Accueil</a><a href="a-propos.html" data-i18n="nav.apropos">À propos</a><a href="formations.html" data-i18n="nav.formations">Formations</a>
+  <a href="evenements.html" data-i18n="nav.evenements">Événements</a><a href="actualites.html" data-i18n="nav.actualites">Actualités</a><a href="galerie.html" data-i18n="nav.galerie">Galerie</a>
+  <a href="partenaires.html" data-i18n="nav.partenaires">Partenaires</a><a href="contact.html" data-i18n="nav.contact">Contact</a>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html" data-i18n="nav.accueil">Accueil</a> / Partenaires</div>
+    <div class="eyebrow">Ils nous font confiance</div>
+    <h1>Nos partenaires</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid grid-4" id="partnersGrid">
+      <p class="body-text">Chargement…</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-bottom" style="border-top:1px solid rgba(241,239,232,0.12); padding-top:22px;">
+      <span>© 2026 CHODEP. <span data-i18n="footer.rights">Tous droits réservés.</span></span>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="js/i18n.js"></script>
+<script type="module" src="js/main.js"></script>
+<script type="module" src="js/settings.js"></script>
+<script type="module" src="js/stats.js"></script>
+<script type="module">
+import { escapeHtml } from "./js/main.js";
+const FALLBACK = [
+  { nom:"Partenaire A", description:"Soutien institutionnel", lien:"#" },
+  { nom:"Partenaire B", description:"Appui logistique", lien:"#" },
+  { nom:"Partenaire C", description:"Financement de programmes", lien:"#" },
+  { nom:"Partenaire D", description:"Partenaire académique", lien:"#" },
+];
+async function load(){
+  let items = FALLBACK;
+  try{
+    const { supabase } = await import("./js/supabase-config.js");
+    const { data, error } = await supabase.from("partenaires").select("*").eq("publie", true);
+    if(error) throw error;
+    if(data && data.length) items = data;
+  }catch(err){ console.warn("Supabase indisponible, partenaires de démonstration.", err.message); }
+
+  document.getElementById("partnersGrid").innerHTML = items.map(p => `
+    <a href="${p.lien||'#'}" target="_blank" rel="noopener" class="reveal in" style="text-decoration:none;">
+      <div class="partner-logo">${escapeHtml(p.nom)}</div>
+      <p class="body-text" style="font-size:0.85rem; text-align:center; margin-top:10px;">${escapeHtml(p.description||"")}</p>
+    </a>`).join("");
+}
+load();
+</script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="pageTitle">Formation — CHODEP</title>
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="brand"><span class="mark">CH</span> CHODEP</a>
+    <nav class="main-nav">
+      <a href="index.html" data-i18n="nav.accueil">Accueil</a>
+      <a href="a-propos.html" data-i18n="nav.apropos">À propos</a>
+      <a href="formations.html" class="active" data-i18n="nav.formations">Formations</a>
+      <a href="evenements.html" data-i18n="nav.evenements">Événements</a>
+      <a href="actualites.html" data-i18n="nav.actualites">Actualités</a>
+      <a href="galerie.html" data-i18n="nav.galerie">Galerie</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Changer de thème">🌓</button>
+      <button class="hamburger" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav">
+  <div class="top-row"><a href="index.html" class="brand" style="color:#F1EFE8"><span class="mark">CH</span> CHODEP</a><button class="close-btn">✕</button></div>
+  <a href="index.html" data-i18n="nav.accueil">Accueil</a><a href="a-propos.html" data-i18n="nav.apropos">À propos</a><a href="formations.html" data-i18n="nav.formations">Formations</a>
+  <a href="evenements.html" data-i18n="nav.evenements">Événements</a><a href="actualites.html" data-i18n="nav.actualites">Actualités</a><a href="galerie.html" data-i18n="nav.galerie">Galerie</a>
+  <a href="contact.html" data-i18n="nav.contact">Contact</a>
+</div>
+
+<section class="page-hero" style="padding-bottom:40px;">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html" data-i18n="nav.accueil">Accueil</a> / <a href="formations.html" data-i18n="nav.formations">Formations</a> / <span id="breadcrumbTitle">Détail</span></div>
+    <div class="eyebrow">Formation</div>
+    <h1 id="detailTitle">Chargement…</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid grid-2" style="gap:56px; align-items:start;" id="detailContent">
+      <!-- Colonne gauche : détails -->
+      <div class="reveal in">
+        <div id="detailImage" style="aspect-ratio:16/9; border-radius:var(--radius-l); background:linear-gradient(135deg,var(--ink-2),var(--ink)); margin-bottom:30px;"></div>
+        <div id="detailStatus" style="margin-bottom:20px;"></div>
+        <h3>Description</h3>
+        <p class="body-text" id="detailDescription" style="margin-top:10px;">…</p>
+        <h3 style="margin-top:30px;">Objectifs</h3>
+        <p class="body-text" id="detailObjectifs" style="margin-top:10px;">…</p>
+        <h3 style="margin-top:30px;">Programme</h3>
+        <p class="body-text" id="detailProgramme" style="margin-top:10px; white-space:pre-line;">…</p>
+        <div class="grid grid-2" style="margin-top:34px; gap:16px;">
+          <div class="testimonial" style="padding:20px;"><div style="font-size:0.78rem; color:var(--text-faint); text-transform:uppercase; letter-spacing:0.06em;">Formateur</div><div id="detailFormateur" style="font-family:var(--font-display); font-size:1.1rem; margin-top:6px;">—</div></div>
+          <div class="testimonial" style="padding:20px;"><div style="font-size:0.78rem; color:var(--text-faint); text-transform:uppercase; letter-spacing:0.06em;">Prix</div><div id="detailPrix" style="font-family:var(--font-display); font-size:1.1rem; margin-top:6px;">Gratuit</div></div>
+        </div>
+      </div>
+
+      <!-- Colonne droite : infos pratiques + inscription -->
+      <div class="reveal in">
+        <div class="contact-info-card" style="margin-bottom:24px;">
+          <div class="row"><span>📅</span><div><div style="font-size:0.78rem; opacity:0.7;">Date</div><strong id="infoDate">—</strong></div></div>
+          <div class="row"><span>⏱️</span><div><div style="font-size:0.78rem; opacity:0.7;">Durée</div><strong id="infoDuree">—</strong></div></div>
+          <div class="row"><span>📍</span><div><div style="font-size:0.78rem; opacity:0.7;">Lieu</div><strong id="infoLieu">—</strong></div></div>
+          <div class="row"><span>👥</span><div><div style="font-size:0.78rem; opacity:0.7;">Places</div><strong id="infoPlaces">—</strong></div></div>
+        </div>
+
+        <div class="card" style="padding:30px;">
+          <h3 style="margin-bottom:6px;">S'inscrire à cette formation</h3>
+          <p class="form-note" style="margin-bottom:20px;">Remplissez le formulaire ci-dessous, votre inscription sera enregistrée immédiatement.</p>
+          <form id="inscriptionForm">
+            <div class="form-grid">
+              <div class="field"><label for="nom" data-i18n="form.nom">Nom *</label><input type="text" id="nom" required></div>
+              <div class="field"><label for="prenom" data-i18n="form.prenom">Prénom *</label><input type="text" id="prenom" required></div>
+              <div class="field"><label for="telephone" data-i18n="form.telephone">Téléphone *</label><input type="tel" id="telephone" required></div>
+              <div class="field"><label for="email" data-i18n="form.email">Email *</label><input type="email" id="email" required></div>
+              <div class="field"><label for="sexe">Sexe</label>
+                <select id="sexe"><option value="">—</option><option>Homme</option><option>Femme</option></select>
+              </div>
+              <div class="field"><label for="ville" data-i18n="form.ville">Ville *</label><input type="text" id="ville" required></div>
+              <div class="field full"><label for="message" data-i18n="form.message">Message / commentaire</label><textarea id="message" placeholder="Facultatif"></textarea></div>
+            </div>
+            <div class="form-success" id="formSuccess">✅ Votre inscription a été enregistrée avec succès.</div>
+            <div class="form-error" id="formError">Une erreur est survenue. Merci de réessayer.</div>
+            <button type="submit" class="btn btn-primary" style="width:100%; margin-top:20px;" id="submitBtn" data-i18n="form.submit.inscription">Envoyer mon inscription</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-bottom" style="border-top:1px solid rgba(241,239,232,0.12); padding-top:22px;">
+      <span>© 2026 CHODEP. <span data-i18n="footer.rights">Tous droits réservés.</span></span>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="js/i18n.js"></script>
+<script type="module" src="js/main.js"></script>
+<script type="module" src="js/settings.js"></script>
+<script type="module" src="js/stats.js"></script>
+<script type="module" src="js/formation-detail.js"></script>
+</body>
+</html>

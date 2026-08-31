@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — CHODEP</title>
+<meta name="description" content="Contactez CHODEP : téléphone, WhatsApp, email, adresse et formulaire de contact.">
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="brand"><span class="mark">CH</span> CHODEP</a>
+    <nav class="main-nav">
+      <a href="index.html" data-i18n="nav.accueil">Accueil</a><a href="a-propos.html" data-i18n="nav.apropos">À propos</a><a href="formations.html" data-i18n="nav.formations">Formations</a>
+      <a href="evenements.html" data-i18n="nav.evenements">Événements</a><a href="actualites.html" data-i18n="nav.actualites">Actualités</a>
+      <a href="galerie.html" data-i18n="nav.galerie">Galerie</a><a href="contact.html" class="active" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Changer de thème">🌓</button>
+      <button class="hamburger" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav">
+  <div class="top-row"><a href="index.html" class="brand" style="color:#F1EFE8"><span class="mark">CH</span> CHODEP</a><button class="close-btn">✕</button></div>
+  <a href="index.html" data-i18n="nav.accueil">Accueil</a><a href="a-propos.html" data-i18n="nav.apropos">À propos</a><a href="formations.html" data-i18n="nav.formations">Formations</a>
+  <a href="evenements.html" data-i18n="nav.evenements">Événements</a><a href="actualites.html" data-i18n="nav.actualites">Actualités</a><a href="galerie.html" data-i18n="nav.galerie">Galerie</a>
+  <a href="partenaires.html" data-i18n="nav.partenaires">Partenaires</a><a href="contact.html" data-i18n="nav.contact">Contact</a>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html" data-i18n="nav.accueil">Accueil</a> / Contact</div>
+    <div class="eyebrow">Parlons-en</div>
+    <h1>Contactez-nous</h1>
+    <p class="lede" style="color:rgba(241,239,232,0.78); margin-top:16px;">Une question, un projet, une envie de collaborer ? Écrivez-nous.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid grid-2" style="gap:50px; align-items:start;">
+      <div class="reveal in">
+        <div class="contact-info-card">
+          <div class="row"><span>📞</span><div><div style="font-size:0.78rem; opacity:0.7;">Téléphone</div><strong data-setting="telephone">+235 XX XX XX XX</strong></div></div>
+          <div class="row"><span>💬</span><div><div style="font-size:0.78rem; opacity:0.7;">WhatsApp</div><strong data-setting="whatsapp">+235 XX XX XX XX</strong></div></div>
+          <div class="row"><span>✉️</span><div><div style="font-size:0.78rem; opacity:0.7;">Email</div><strong data-setting="email">contact@chodep.org</strong></div></div>
+          <div class="row"><span>📍</span><div><div style="font-size:0.78rem; opacity:0.7;">Adresse</div><strong data-setting="adresse">N'Djaména, Tchad</strong></div></div>
+          <div class="row"><span>🕘</span><div><div style="font-size:0.78rem; opacity:0.7;">Horaires</div><strong data-setting="horaires">Lun – Ven, 8h – 17h</strong></div></div>
+        </div>
+        <div class="map-embed reveal in">
+          <iframe loading="lazy" src="https://www.google.com/maps?q=N%27Djamena%2C%20Tchad&output=embed" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="card reveal in" style="padding:32px;">
+        <h3 style="margin-bottom:20px;">Envoyez-nous un message</h3>
+        <form id="contactForm">
+          <div class="form-grid">
+            <div class="field"><label for="cNom" data-i18n="form.nom">Nom *</label><input type="text" id="cNom" required></div>
+            <div class="field"><label for="cEmail" data-i18n="form.email">Email *</label><input type="email" id="cEmail" required></div>
+            <div class="field"><label for="cTelephone" data-i18n="form.telephone">Téléphone</label><input type="tel" id="cTelephone"></div>
+            <div class="field"><label for="cSujet">Sujet *</label><input type="text" id="cSujet" required></div>
+            <div class="field full"><label for="cMessage">Message *</label><textarea id="cMessage" required></textarea></div>
+          </div>
+          <div class="form-success" id="contactSuccess">✅ Votre message a bien été envoyé. Nous vous répondrons rapidement.</div>
+          <div class="form-error" id="contactError">Une erreur est survenue. Merci de réessayer.</div>
+          <button type="submit" class="btn btn-primary" style="width:100%; margin-top:20px;" id="contactSubmitBtn" data-i18n="form.submit.contact">Envoyer</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-bottom" style="border-top:1px solid rgba(241,239,232,0.12); padding-top:22px;">
+      <span>© 2026 CHODEP. <span data-i18n="footer.rights">Tous droits réservés.</span></span>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="js/i18n.js"></script>
+<script type="module" src="js/main.js"></script>
+<script type="module" src="js/settings.js"></script>
+<script type="module" src="js/stats.js"></script>
+<script type="module" src="js/contact.js"></script>
+</body>
+</html>
