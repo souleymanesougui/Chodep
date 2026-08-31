@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inscriptions — Administration CHODEP</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="admin-shell">
+  <aside class="admin-sidebar" id="sidebar"></aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <div><h2>Inscriptions</h2><p class="body-text" style="margin-top:4px;">Toutes les inscriptions reçues via le site.</p></div>
+    </div>
+    <div class="filter-bar" id="statusFilters">
+      <button data-status="tous" class="active">Toutes</button>
+      <button data-status="nouvelle">Nouvelle</button>
+      <button data-status="confirmee">Confirmée</button>
+      <button data-status="refusee">Refusée</button>
+      <button data-status="terminee">Terminée</button>
+    </div>
+    <table class="admin-table">
+      <thead><tr><th>Participant</th><th>Contact</th><th>Formation</th><th>Ville</th><th>Date</th><th>Statut</th></tr></thead>
+      <tbody id="inscriptionsTable"><tr><td colspan="6">Chargement…</td></tr></tbody>
+    </table>
+  </main>
+</div>
+
+<script type="module" src="../js/admin-sidebar.js"></script>
+<script type="module" src="../js/admin-inscriptions.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paramètres — Administration CHODEP</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="admin-shell">
+  <aside class="admin-sidebar" id="sidebar"></aside>
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <div><h2>Paramètres du site</h2><p class="body-text" style="margin-top:4px;">Ces informations sont utilisées automatiquement sur le site public (contact, pied de page, statistiques de la page d'accueil).</p></div>
+    </div>
+
+    <form id="settingsForm">
+      <div class="card" style="padding:28px; margin-bottom:24px;">
+        <h3 style="margin-bottom:16px;">Identité</h3>
+        <div class="form-grid">
+          <div class="field"><label>Nom de l'organisation</label><input type="text" id="sNom" value="CHODEP"></div>
+          <div class="field full"><label>Description courte</label><input type="text" id="sDescription" placeholder="Construire aujourd'hui les compétences et les leaders de demain."></div>
+          <div class="field full">
+            <label>Logo</label>
+            <input type="file" id="sLogoInput" accept="image/png,image/jpeg,image/webp,image/svg+xml">
+            <img id="sLogoPreview" style="display:none; margin-top:10px; max-height:60px;" alt="Aperçu">
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="padding:28px; margin-bottom:24px;">
+        <h3 style="margin-bottom:16px;">Coordonnées</h3>
+        <div class="form-grid">
+          <div class="field"><label>Téléphone</label><input type="text" id="sTelephone" placeholder="+235 XX XX XX XX"></div>
+          <div class="field"><label>WhatsApp</label><input type="text" id="sWhatsapp" placeholder="+235 XX XX XX XX"></div>
+          <div class="field"><label>Email</label><input type="email" id="sEmail" placeholder="contact@chodep.org"></div>
+          <div class="field"><label>Adresse</label><input type="text" id="sAdresse" placeholder="N'Djaména, Tchad"></div>
+          <div class="field full"><label>Horaires</label><input type="text" id="sHoraires" placeholder="Lun – Ven, 8h – 17h"></div>
+        </div>
+      </div>
+
+      <div class="card" style="padding:28px; margin-bottom:24px;">
+        <h3 style="margin-bottom:16px;">Réseaux sociaux</h3>
+        <div class="form-grid">
+          <div class="field"><label>Facebook</label><input type="url" id="sFacebook"></div>
+          <div class="field"><label>WhatsApp (lien)</label><input type="url" id="sWhatsappLien"></div>
+          <div class="field"><label>Instagram</label><input type="url" id="sInstagram"></div>
+          <div class="field"><label>TikTok</label><input type="url" id="sTiktok"></div>
+          <div class="field"><label>LinkedIn</label><input type="url" id="sLinkedin"></div>
+          <div class="field"><label>YouTube</label><input type="url" id="sYoutube"></div>
+        </div>
+      </div>
+
+      <div class="card" style="padding:28px; margin-bottom:24px;">
+        <h3 style="margin-bottom:16px;">Statistiques affichées à l'accueil</h3>
+        <div class="form-grid">
+          <div class="field"><label>Participants</label><input type="text" id="statParticipants" value="+500"></div>
+          <div class="field"><label>Formations</label><input type="text" id="statFormations" value="+30"></div>
+          <div class="field"><label>Événements</label><input type="text" id="statEvenements" value="+20"></div>
+          <div class="field"><label>Années d'expérience</label><input type="text" id="statAnnees" value="+10"></div>
+        </div>
+      </div>
+
+      <div class="form-error" id="formError">Une erreur est survenue.</div>
+      <div class="form-success" id="formSuccess">✅ Paramètres enregistrés avec succès.</div>
+      <button type="submit" class="btn btn-primary" id="saveBtn">Enregistrer les paramètres</button>
+    </form>
+  </main>
+</div>
+
+<script type="module" src="../js/admin-sidebar.js"></script>
+<script type="module" src="../js/admin-parametres.js"></script>
+</body>
+</html>

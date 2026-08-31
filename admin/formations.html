@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formations — Administration CHODEP</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="admin-shell">
+  <aside class="admin-sidebar" id="sidebar"></aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <div><h2>Formations</h2><p class="body-text" style="margin-top:4px;">Créer, modifier, publier ou masquer les formations.</p></div>
+      <button class="btn btn-primary btn-sm" id="newFormationBtn">+ Nouvelle formation</button>
+    </div>
+
+    <table class="admin-table">
+      <thead><tr><th>Titre</th><th>Date</th><th>Lieu</th><th>Places</th><th>Statut</th><th>Visibilité</th><th></th></tr></thead>
+      <tbody id="formationsTable"><tr><td colspan="7">Chargement…</td></tr></tbody>
+    </table>
+  </main>
+</div>
+
+<!-- Modale création / édition -->
+<div class="modal-backdrop" id="formationModal">
+  <div class="modal">
+    <h3 style="margin-bottom:20px;" id="modalTitle">Nouvelle formation</h3>
+    <form id="formationForm">
+      <input type="hidden" id="fId">
+      <div class="form-grid">
+        <div class="field full"><label>Titre (Français) *</label><input type="text" id="fTitre" required></div>
+        <div class="field full"><label>Title (English) — facultatif, sinon le titre français est réutilisé</label><input type="text" id="fTitreEn"></div>
+        <div class="field full"><label>Description courte (Français) *</label><textarea id="fDescription" required></textarea></div>
+        <div class="field full"><label>Description (English) — optional</label><textarea id="fDescriptionEn"></textarea></div>
+        <div class="field full"><label>Objectifs</label><textarea id="fObjectifs"></textarea></div>
+        <div class="field full"><label>Programme</label><textarea id="fProgramme" placeholder="Un point par ligne"></textarea></div>
+        <div class="field"><label>Formateur</label><input type="text" id="fFormateur"></div>
+        <div class="field"><label>Prix (FCFA, vide = gratuit)</label><input type="number" id="fPrix"></div>
+        <div class="field"><label>Date *</label><input type="date" id="fDate" required></div>
+        <div class="field"><label>Durée</label><input type="text" id="fDuree" placeholder="ex : 3 jours"></div>
+        <div class="field"><label>Lieu *</label><input type="text" id="fLieu" required></div>
+        <div class="field"><label>Places disponibles *</label><input type="number" id="fPlaces" required min="1"></div>
+        <div class="field"><label>Statut</label>
+          <select id="fStatut"><option value="ouvert">Ouvert</option><option value="bientot">Bientôt</option><option value="complet">Complet</option></select>
+        </div>
+        <div class="field"><label>Visibilité</label>
+          <select id="fPublie"><option value="true">Publiée</option><option value="false">Masquée (brouillon)</option></select>
+        </div>
+        <div class="field full">
+          <label>Image</label>
+          <input type="file" id="fImageInput" accept="image/png,image/jpeg,image/webp,image/avif">
+          <img id="fImagePreview" style="display:none; margin-top:10px; max-height:140px; border-radius:10px;" alt="Aperçu">
+          <input type="hidden" id="fImage">
+        </div>
+      </div>
+      <div class="form-error" id="formationError">Une erreur est survenue.</div>
+      <div style="display:flex; gap:12px; margin-top:22px;">
+        <button type="button" class="btn btn-outline" id="cancelModalBtn" style="flex:1;">Annuler</button>
+        <button type="submit" class="btn btn-primary" style="flex:1;" id="saveFormationBtn">Enregistrer</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script type="module" src="../js/admin-sidebar.js"></script>
+<script type="module" src="../js/admin-formations.js"></script>
+</body>
+</html>

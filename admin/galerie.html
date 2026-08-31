@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galerie — Administration CHODEP</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="admin-shell">
+  <aside class="admin-sidebar" id="sidebar"></aside>
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <div><h2>Galerie</h2><p class="body-text" style="margin-top:4px;">Photos affichées dans la galerie publique.</p></div>
+    </div>
+
+    <div class="card" style="padding:26px; margin-bottom:30px;">
+      <h3 style="margin-bottom:14px;">Ajouter des photos</h3>
+      <div class="form-grid">
+        <div class="field"><label>Catégorie</label>
+          <select id="uploadCat"><option value="formations">Formations</option><option value="conferences">Conférences</option><option value="ateliers">Ateliers</option><option value="evenements">Événements</option><option value="equipe">Équipe</option></select>
+        </div>
+        <div class="field"><label>Album (facultatif)</label><input type="text" id="uploadAlbum" placeholder="ex : Session Août 2026"></div>
+        <div class="field full"><label>Photos (plusieurs fichiers possibles) *</label><input type="file" id="uploadInput" accept="image/png,image/jpeg,image/webp,image/avif" multiple></div>
+      </div>
+      <div id="uploadProgress" class="form-note" style="margin-top:10px;"></div>
+      <div class="form-error" id="uploadError"></div>
+      <button class="btn btn-primary" id="uploadBtn" style="margin-top:16px;">Téléverser</button>
+    </div>
+
+    <div class="filter-bar" id="galleryFilters">
+      <button data-cat="tous" class="active">Toutes</button>
+      <button data-cat="formations">Formations</button>
+      <button data-cat="conferences">Conférences</button>
+      <button data-cat="ateliers">Ateliers</button>
+      <button data-cat="evenements">Événements</button>
+      <button data-cat="equipe">Équipe</button>
+    </div>
+    <div class="gallery-grid" id="adminGalleryGrid" style="min-height:120px;"></div>
+  </main>
+</div>
+
+<script type="module" src="../js/admin-sidebar.js"></script>
+<script type="module" src="../js/admin-galerie.js"></script>
+</body>
+</html>

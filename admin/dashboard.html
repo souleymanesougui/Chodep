@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tableau de bord — Administration CHODEP</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="admin-shell">
+  <aside class="admin-sidebar" id="sidebar"></aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <div><h2>Tableau de bord</h2><p class="body-text" style="margin-top:4px;">Vue d'ensemble de l'activité du site.</p></div>
+      <span id="adminUserEmail" class="form-note"></span>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi-card"><div class="num" id="kpiVisitors">—</div><div class="lbl">Visites totales (compteur interne)</div></div>
+      <div class="kpi-card"><div class="num" id="kpiInscriptions">—</div><div class="lbl">Inscriptions</div></div>
+      <div class="kpi-card"><div class="num" id="kpiFormations">—</div><div class="lbl">Formations actives</div></div>
+      <div class="kpi-card"><div class="num" id="kpiMessages">—</div><div class="lbl">Messages non lus</div></div>
+    </div>
+
+    <div class="card" style="padding:20px 26px; margin-bottom:36px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+      <div>
+        <strong>Statistiques détaillées (appareils, pays, sources de trafic, pages vues)</strong>
+        <p class="body-text" style="font-size:0.88rem; margin-top:4px;">Le compteur ci-dessus est un total simple et réel. Pour des statistiques plus fines (appareils, pays, sources de trafic), branche un outil externe comme Plausible ou Google Analytics — voir le README.</p>
+      </div>
+      <a href="https://supabase.com/dashboard" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Ouvrir le Dashboard Supabase ↗</a>
+    </div>
+
+    <h3 style="margin-bottom:16px;">Dernières inscriptions</h3>
+    <table class="admin-table" style="margin-bottom:40px;">
+      <thead><tr><th>Nom</th><th>Formation</th><th>Date</th><th>Statut</th></tr></thead>
+      <tbody id="recentInscriptions"><tr><td colspan="4">Chargement…</td></tr></tbody>
+    </table>
+
+    <h3 style="margin-bottom:16px;">Derniers messages</h3>
+    <table class="admin-table">
+      <thead><tr><th>Nom</th><th>Sujet</th><th>Date</th><th>Statut</th></tr></thead>
+      <tbody id="recentMessages"><tr><td colspan="4">Chargement…</td></tr></tbody>
+    </table>
+  </main>
+</div>
+
+<script type="module" src="../js/admin-sidebar.js"></script>
+<script type="module" src="../js/admin-dashboard.js"></script>
+</body>
+</html>

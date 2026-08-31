@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Équipe — Administration CHODEP</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="admin-shell">
+  <aside class="admin-sidebar" id="sidebar"></aside>
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <div><h2>Équipe</h2><p class="body-text" style="margin-top:4px;">Membres affichés sur la page « À propos ».</p></div>
+      <button class="btn btn-primary btn-sm" id="newBtn">+ Nouveau membre</button>
+    </div>
+    <table class="admin-table">
+      <thead><tr><th>Photo</th><th>Nom</th><th>Fonction</th><th>Ordre</th><th>Visibilité</th><th></th></tr></thead>
+      <tbody id="table"><tr><td colspan="6">Chargement…</td></tr></tbody>
+    </table>
+  </main>
+</div>
+
+<div class="modal-backdrop" id="modal">
+  <div class="modal">
+    <h3 id="modalTitle" style="margin-bottom:20px;">Nouveau membre</h3>
+    <form id="itemForm">
+      <input type="hidden" id="fId">
+      <div class="form-grid">
+        <div class="field"><label>Nom *</label><input type="text" id="fNom" required></div>
+        <div class="field"><label>Fonction *</label><input type="text" id="fFonction" required></div>
+        <div class="field full"><label>Présentation</label><textarea id="fPresentation"></textarea></div>
+        <div class="field"><label>Ordre d'affichage</label><input type="number" id="fOrdre" value="0"></div>
+        <div class="field"><label>Visibilité</label><select id="fPublie"><option value="true">Affiché</option><option value="false">Masqué</option></select></div>
+        <div class="field full">
+          <label>Photo</label>
+          <input type="file" id="fImageInput" accept="image/png,image/jpeg,image/webp,image/avif">
+          <img id="fImagePreview" style="display:none; margin-top:10px; max-height:120px; border-radius:50%;" alt="Aperçu">
+        </div>
+      </div>
+      <div class="form-error" id="formError">Une erreur est survenue.</div>
+      <div style="display:flex; gap:12px; margin-top:22px;">
+        <button type="button" class="btn btn-outline" id="cancelBtn" style="flex:1;">Annuler</button>
+        <button type="submit" class="btn btn-primary" style="flex:1;" id="saveBtn">Enregistrer</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script type="module" src="../js/admin-sidebar.js"></script>
+<script type="module" src="../js/admin-equipe.js"></script>
+</body>
+</html>

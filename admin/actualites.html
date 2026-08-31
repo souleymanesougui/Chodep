@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Actualités — Administration CHODEP</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="admin-shell">
+  <aside class="admin-sidebar" id="sidebar"></aside>
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <div><h2>Actualités</h2><p class="body-text" style="margin-top:4px;">Articles publiés sur le site public.</p></div>
+      <button class="btn btn-primary btn-sm" id="newBtn">+ Nouvel article</button>
+    </div>
+    <table class="admin-table">
+      <thead><tr><th>Titre</th><th>Catégorie</th><th>Auteur</th><th>Date</th><th>Visibilité</th><th></th></tr></thead>
+      <tbody id="table"><tr><td colspan="6">Chargement…</td></tr></tbody>
+    </table>
+  </main>
+</div>
+
+<div class="modal-backdrop" id="modal">
+  <div class="modal">
+    <h3 id="modalTitle" style="margin-bottom:20px;">Nouvel article</h3>
+    <form id="itemForm">
+      <input type="hidden" id="fId">
+      <div class="form-grid">
+        <div class="field full"><label>Titre *</label><input type="text" id="fTitre" required></div>
+        <div class="field full"><label>Contenu *</label><textarea id="fContenu" required style="min-height:160px;"></textarea></div>
+        <div class="field"><label>Catégorie *</label>
+          <select id="fCategorie"><option value="formation">Formation</option><option value="evenement">Événement</option><option value="communaute">Communauté</option></select>
+        </div>
+        <div class="field"><label>Auteur</label><input type="text" id="fAuteur" value="Équipe CHODEP"></div>
+        <div class="field"><label>Date *</label><input type="date" id="fDate" required></div>
+        <div class="field"><label>Visibilité</label><select id="fPublie"><option value="true">Publié</option><option value="false">Masqué (brouillon)</option></select></div>
+        <div class="field full">
+          <label>Image</label>
+          <input type="file" id="fImageInput" accept="image/png,image/jpeg,image/webp,image/avif">
+          <img id="fImagePreview" style="display:none; margin-top:10px; max-height:140px; border-radius:10px;" alt="Aperçu">
+        </div>
+      </div>
+      <div class="form-error" id="formError">Une erreur est survenue.</div>
+      <div style="display:flex; gap:12px; margin-top:22px;">
+        <button type="button" class="btn btn-outline" id="cancelBtn" style="flex:1;">Annuler</button>
+        <button type="submit" class="btn btn-primary" style="flex:1;" id="saveBtn">Enregistrer</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script type="module" src="../js/admin-sidebar.js"></script>
+<script type="module" src="../js/admin-actualites.js"></script>
+</body>
+</html>

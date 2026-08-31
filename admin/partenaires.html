@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partenaires — Administration CHODEP</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="admin-shell">
+  <aside class="admin-sidebar" id="sidebar"></aside>
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <div><h2>Partenaires</h2><p class="body-text" style="margin-top:4px;">Organisations affichées sur la page « Nos partenaires ».</p></div>
+      <button class="btn btn-primary btn-sm" id="newBtn">+ Nouveau partenaire</button>
+    </div>
+    <table class="admin-table">
+      <thead><tr><th>Logo</th><th>Nom</th><th>Site web</th><th>Visibilité</th><th></th></tr></thead>
+      <tbody id="table"><tr><td colspan="5">Chargement…</td></tr></tbody>
+    </table>
+  </main>
+</div>
+
+<div class="modal-backdrop" id="modal">
+  <div class="modal">
+    <h3 id="modalTitle" style="margin-bottom:20px;">Nouveau partenaire</h3>
+    <form id="itemForm">
+      <input type="hidden" id="fId">
+      <div class="form-grid">
+        <div class="field full"><label>Nom *</label><input type="text" id="fNom" required></div>
+        <div class="field full"><label>Description</label><textarea id="fDescription"></textarea></div>
+        <div class="field full"><label>Site web</label><input type="url" id="fLien" placeholder="https://..."></div>
+        <div class="field"><label>Visibilité</label><select id="fPublie"><option value="true">Affiché</option><option value="false">Masqué</option></select></div>
+        <div class="field full">
+          <label>Logo</label>
+          <input type="file" id="fImageInput" accept="image/png,image/jpeg,image/webp,image/avif">
+          <img id="fImagePreview" style="display:none; margin-top:10px; max-height:100px; border-radius:10px;" alt="Aperçu">
+        </div>
+      </div>
+      <div class="form-error" id="formError">Une erreur est survenue.</div>
+      <div style="display:flex; gap:12px; margin-top:22px;">
+        <button type="button" class="btn btn-outline" id="cancelBtn" style="flex:1;">Annuler</button>
+        <button type="submit" class="btn btn-primary" style="flex:1;" id="saveBtn">Enregistrer</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script type="module" src="../js/admin-sidebar.js"></script>
+<script type="module" src="../js/admin-partenaires.js"></script>
+</body>
+</html>

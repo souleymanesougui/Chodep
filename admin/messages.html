@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Messages — Administration CHODEP</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="admin-shell">
+  <aside class="admin-sidebar" id="sidebar"></aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <div><h2>Messages</h2><p class="body-text" style="margin-top:4px;">Messages reçus depuis le formulaire de contact.</p></div>
+    </div>
+    <table class="admin-table">
+      <thead><tr><th>Nom</th><th>Contact</th><th>Sujet</th><th>Message</th><th>Date</th><th>Statut</th></tr></thead>
+      <tbody id="messagesTable"><tr><td colspan="6">Chargement…</td></tr></tbody>
+    </table>
+  </main>
+</div>
+
+<script type="module" src="../js/admin-sidebar.js"></script>
+<script type="module" src="../js/admin-messages.js"></script>
+</body>
+</html>
